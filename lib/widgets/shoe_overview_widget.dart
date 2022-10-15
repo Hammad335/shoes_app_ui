@@ -20,7 +20,7 @@ class ShoeOverviewWidget extends StatelessWidget {
             height: 200,
           ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

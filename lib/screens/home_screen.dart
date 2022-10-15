@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                    width: 240,
+                    width: 245,
                     height: 50,
                     child: TextField(
                       decoration: InputDecoration(
@@ -48,6 +48,7 @@ class HomeScreen extends StatelessWidget {
                         prefixIcon: const Icon(Icons.search),
                         filled: true,
                         fillColor: kSearchBoxBackgroundColor,
+                        contentPadding: const EdgeInsets.only(top: 10),
                       ),
                     ),
                   ),
@@ -55,8 +56,8 @@ class HomeScreen extends StatelessWidget {
                     elevation: 3,
                     borderRadius: BorderRadius.circular(12),
                     child: Container(
-                      height: 45,
-                      width: 45,
+                      height: 42,
+                      width: 42,
                       decoration: BoxDecoration(
                         color: kWhite,
                         borderRadius: BorderRadius.circular(12),
