@@ -1,7 +1,9 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
+
 import '../constants/constants.dart';
 import '../models/shoe.dart';
-import 'dart:math' as math;
 import '../widgets/price_tag_widget.dart';
 
 class ShoeWidget extends StatelessWidget {
@@ -11,7 +13,7 @@ class ShoeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 200,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
       margin: const EdgeInsets.only(right: 20),
       decoration: BoxDecoration(
         color: kWhite,
@@ -90,31 +92,6 @@ class ShoeWidget extends StatelessWidget {
           ),
           const SizedBox(height: 18),
           PriceTagWidget(price: shoe.price),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   crossAxisAlignment: CrossAxisAlignment.start,
-          //   children: [
-          //     const Text(
-          //       '\$',
-          //       style: TextStyle(
-          //         fontSize: 12,
-          //         color: Colors.orange,
-          //         fontFamily: 'Farah',
-          //         fontWeight: FontWeight.bold,
-          //       ),
-          //     ),
-          //     const SizedBox(width: 2),
-          //     Text(
-          //       shoe.price.toStringAsFixed(1),
-          //       style: const TextStyle(
-          //         fontSize: 20,
-          //         fontWeight: FontWeight.bold,
-          //         fontStyle: FontStyle.italic,
-          //         letterSpacing: 1,
-          //       ),
-          //     ),
-          //   ],
-          // ),
         ],
       ),
     );

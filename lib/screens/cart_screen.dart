@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shoes_app/constants/constants.dart';
 import 'package:shoes_app/constants/dummy_data.dart';
+
 import '../widgets/cart_item_widget.dart';
-import '../widgets/title_widget.dart';
 import '../widgets/header_widget.dart';
+import '../widgets/title_widget.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -67,11 +68,11 @@ class CartScreen extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 36),
+          const SizedBox(height: 25),
           ElevatedButton(
             onPressed: () {},
             style: ButtonStyle(
-              fixedSize: MaterialStateProperty.all(const Size(200, 45)),
+              // fixedSize: MaterialStateProperty.all(const Size(190, 40)),
               backgroundColor: MaterialStateProperty.all(Colors.orange),
               shape: MaterialStateProperty.all(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),

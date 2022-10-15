@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoes_app/constants/constants.dart';
 import 'package:shoes_app/models/category.dart';
-
 import '../constants/enums.dart';
 
 class CategoryWidget extends StatelessWidget {

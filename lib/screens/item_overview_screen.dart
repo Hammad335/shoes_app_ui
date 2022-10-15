@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shoes_app/constants/constants.dart';
 import 'package:shoes_app/widgets/shoe_overview_widget.dart';
 import '../models/shoe.dart';
+import '../widgets/colors_widget.dart';
 import '../widgets/price_tag_widget.dart';
 import '../constants/utils.dart';
 
@@ -58,7 +59,7 @@ class ItemOverviewScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 10),
                   ShoeOverviewWidget(shoeImagePath: shoe.imagePath),
                 ],
               ),
@@ -101,10 +102,10 @@ class ItemOverviewScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
                       Utils.getRatings(),
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 10),
                       const SizedBox(
                         width: double.infinity,
-                        height: 40,
+                        height: 35,
                         child: Text(
                           'Available Sizes',
                           style: TextStyle(
@@ -136,6 +137,43 @@ class ItemOverviewScreen extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 color: index == 1 ? kWhite : Colors.black,
                               ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 25),
+                      const SizedBox(
+                        width: double.infinity,
+                        height: 35,
+                        child: Text(
+                          'Colors',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      const ColorsWidget(),
+                      const SizedBox(height: 25),
+                      const SizedBox(
+                        width: double.infinity,
+                        height: 32,
+                        child: Text(
+                          'Description',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      Flexible(
+                        child: SingleChildScrollView(
+                          physics: const BouncingScrollPhysics(),
+                          child: Container(
+                            padding: const EdgeInsets.only(bottom: 10),
+                            child: const Text(
+                              'Nike shoes are a good brand that you can wear. Nike is one of the best brands that you can obtain these days. These shoes are made to use them in some sports. This shoe provides the user great comfort and effectiveness in the activities. This brand also made different designs in accord with the different sports that exist in the world. This brand is a monopoly now in actuality, with its great demand around the world.',
+                              style: TextStyle(letterSpacing: 1),
                             ),
                           ),
                         ),

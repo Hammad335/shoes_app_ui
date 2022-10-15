@@ -36,12 +36,20 @@ class HeaderWidget extends StatelessWidget {
           ),
         ),
         Container(
-          padding: const EdgeInsets.all(5),
+          alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: kWhite,
+            color: kSearchBoxBackgroundColor,
             borderRadius: BorderRadius.circular(12),
           ),
-          child: const Icon(Icons.supervised_user_circle, size: 25),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.asset(
+              'assets/images/profile_image.png',
+              width: 35,
+              height: 35,
+              fit: BoxFit.fitWidth,
+            ),
+          ),
         ),
       ],
     );
