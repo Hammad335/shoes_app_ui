@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoes_app/screens/item_overview_screen.dart';
 import '../widgets/categoryWidget.dart';
 import '../widgets/shoe_widget.dart';
 import '../widgets/title_widget.dart';
@@ -89,7 +90,18 @@ class HomeScreen extends StatelessWidget {
           child: Row(
             children: [
               const SizedBox(width: 30),
-              ...DummyData.SHOES.map((shoe) => ShoeWidget(shoe: shoe)).toList(),
+              ...DummyData.SHOES
+                  .map(
+                    (shoe) => GestureDetector(
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  ItemOverviewScreen(shoe: shoe))),
+                      child: ShoeWidget(shoe: shoe),
+                    ),
+                  )
+                  .toList(),
             ],
           ),
         ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shoes_app/constants/constants.dart';
 import 'package:shoes_app/models/category.dart';
 
+import '../constants/enums.dart';
+
 class CategoryWidget extends StatelessWidget {
   final Category category;
 
@@ -14,7 +16,7 @@ class CategoryWidget extends StatelessWidget {
       margin: const EdgeInsets.only(right: 20),
       height: 65,
       decoration: BoxDecoration(
-        // color: kWhite,
+        color: category.name == CATEGORY_NAMES.Nike.name ? kWhite : null,
         borderRadius: BorderRadius.circular(18),
         border: Border.all(
           color: category.name == 'Nike'

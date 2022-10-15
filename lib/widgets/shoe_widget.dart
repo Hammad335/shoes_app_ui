@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../constants/constants.dart';
 import '../models/shoe.dart';
 import 'dart:math' as math;
+import '../widgets/price_tag_widget.dart';
 
 class ShoeWidget extends StatelessWidget {
   final Shoe shoe;
@@ -88,31 +89,32 @@ class ShoeWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 18),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                '\$',
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.orange,
-                  fontFamily: 'Farah',
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(width: 2),
-              Text(
-                shoe.price.toStringAsFixed(1),
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                  letterSpacing: 1,
-                ),
-              ),
-            ],
-          ),
+          PriceTagWidget(price: shoe.price),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   crossAxisAlignment: CrossAxisAlignment.start,
+          //   children: [
+          //     const Text(
+          //       '\$',
+          //       style: TextStyle(
+          //         fontSize: 12,
+          //         color: Colors.orange,
+          //         fontFamily: 'Farah',
+          //         fontWeight: FontWeight.bold,
+          //       ),
+          //     ),
+          //     const SizedBox(width: 2),
+          //     Text(
+          //       shoe.price.toStringAsFixed(1),
+          //       style: const TextStyle(
+          //         fontSize: 20,
+          //         fontWeight: FontWeight.bold,
+          //         fontStyle: FontStyle.italic,
+          //         letterSpacing: 1,
+          //       ),
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     );
