@@ -3,7 +3,7 @@ import 'package:shoes_app/screens/item_overview_screen.dart';
 
 import '../constants/constants.dart';
 import '../constants/dummy_data.dart';
-import '../widgets/categoryWidget.dart';
+import '../widgets/category_widget.dart';
 import '../widgets/header_widget.dart';
 import '../widgets/shoe_widget.dart';
 import '../widgets/title_widget.dart';
